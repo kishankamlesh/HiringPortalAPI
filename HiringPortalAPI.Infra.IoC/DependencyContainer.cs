@@ -1,8 +1,23 @@
-﻿using System;
+﻿using HiringPortalAPI.Application.Interfaces;
+using HiringPortalAPI.Application.Services;
+using HiringPortalAPI.Domain.Interfaces;
+using HiringPortalAPI.Infra.Data.Repository;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace HiringPortalAPI.Infra.IoC
 {
     public class DependencyContainer
     {
+        public static void RegisterServices(IServiceCollection services)
+        {
+            //Application Layer
+            services.AddScoped<IGetCandidates, GetCandidatesService>();
+            
+
+            //infra.Data layer
+            services.AddScoped<ICandidateRepository, CandidateRepository>();
+
+        }
     }
 }
