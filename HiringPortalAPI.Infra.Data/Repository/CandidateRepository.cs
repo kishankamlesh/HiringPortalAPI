@@ -4,6 +4,7 @@ using Microsoft.Identity.Client;
 using Microsoft.SharePoint.Client;
 using OfficeDevPnP.Core;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Security;
 using System.Text;
@@ -16,8 +17,8 @@ namespace HiringPortalAPI.Infra.Data.Repository
         public static AuthenticationManager authManager = new AuthenticationManager();
 
 
-        private static Task<AuthenticationResult>  _result = GetAccessToken();
-        ClientContext ctx = authManager.GetAzureADAccessTokenAuthenticatedContext("https://gearedupteam.sharepoint.com/sites/GearedUpSite", _result.AccessToken);
+        private static Task<AuthenticationResult> _result = GetAccessToken();
+        ClientContext ctx = authManager.GetAzureADAccessTokenAuthenticatedContext("https://gearedupteam.sharepoint.com/sites/GearedUpSite", _result.Result.AccessToken);
         private static async Task<AuthenticationResult> GetAccessToken()
         {
             var ClientId = "59f6f9ba-c753-4b75-8758-5f98b469fd92";
@@ -30,7 +31,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
             app = PublicClientApplicationBuilder.Create(ClientId).WithTenantId(Tenant).Build();
 
             string[] scopes = new string[] { "https://gearedupteam.sharepoint.com/.default" };
-            
+
             AuthenticationResult result = null;
 
             SecureString s = new SecureString();
@@ -40,18 +41,28 @@ namespace HiringPortalAPI.Infra.Data.Repository
             {
                 result = await app.AcquireTokenByUsernamePassword(scopes, SpAccount, s).ExecuteAsync();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
                 Console.ReadLine();
             }
             return result;
         }
-        
+
         public List<HiringInfoModel> GetCandidates()
         {
-            throw new NotImplementedException();
+            List targetList = ctx.Web.Lists.GetByTitle("GDAS-Hiring-Info");
+            CamlQuery oQuery = CamlQuery.CreateAllItemsQuery();
+            ListItemCollection oCollection = targetList.GetItems(oQuery);
+            ctx.Load(oCollection);
+            ctx.ExecuteQuery();
+            List<HiringInfoModel> reqList = new List<HiringInfoModel>();
+            foreach (ListItem oItem in oCollection)
+            {                
+                Console.WriteLine(oItem["InterviewLevel"].ToString()); //prints data from the list to console
+            }
+            return reqList;
+            
         }
-
     }
 }

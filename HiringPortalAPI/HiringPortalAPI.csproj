@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HiringPortalAPI.Application\HiringPortalAPI.Application.csproj" />
+    <ProjectReference Include="..\HiringPortalAPI.Infra.IoC\HiringPortalAPI.Infra.IoC.csproj" />
   </ItemGroup>
 
 
