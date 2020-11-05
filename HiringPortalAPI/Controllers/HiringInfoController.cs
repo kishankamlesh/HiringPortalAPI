@@ -11,7 +11,7 @@ namespace HiringPortalAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class HiringInfoController : Controller
+    public class HiringInfoController : ControllerBase
     {
         private IGetCandidates _getCandidates;
 
@@ -22,8 +22,7 @@ namespace HiringPortalAPI.Controllers
 
         public IActionResult ViewCandidates()
         {
-            GetCandidatesViewModel model = _getCandidates.GetCandidates();
-            return View(model);
+            return Ok(_getCandidates.GetCandidates());
         }
     }
 }
