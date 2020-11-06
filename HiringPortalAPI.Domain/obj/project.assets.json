@@ -8,27 +8,24 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\kisha\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
       "projectName": "HiringPortalAPI.Domain",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Domain\\obj\\",
+      "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
+      "packagesPath": "C:\\Users\\kisha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\kisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

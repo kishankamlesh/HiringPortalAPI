@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "HiringPortalAPI.Application/1.0.0": {
+        "dependencies": {
+          "HiringPortalAPI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "HiringPortalAPI.Application.dll": {}
+        }
+      },
+      "HiringPortalAPI.Domain/1.0.0": {
+        "runtime": {
+          "HiringPortalAPI.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HiringPortalAPI.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HiringPortalAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

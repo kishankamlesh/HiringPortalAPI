@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj": {}
+    "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj": {
+    "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj",
         "projectName": "HiringPortalAPI.Application",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Application\\obj\\",
+        "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj",
+        "packagesPath": "C:\\Users\\kisha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\kisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -32,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj"
+              "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj"
               }
             }
           }
@@ -65,23 +63,21 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {
+    "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
         "projectName": "HiringPortalAPI.Domain",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Domain\\obj\\",
+        "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\kisha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\kisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -122,23 +118,21 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj": {
+    "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj",
         "projectName": "HiringPortalAPI.Infra.Data",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\obj\\",
+        "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\kisha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\kisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -150,8 +144,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj"
+              "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj"
               }
             }
           }
@@ -228,23 +222,21 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj": {
+    "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj",
+        "projectUniqueName": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj",
         "projectName": "HiringPortalAPI.Infra.IoC",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\obj\\",
+        "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj",
+        "packagesPath": "C:\\Users\\kisha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\kisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -256,11 +248,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj"
+              "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj"
               },
-              "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\Capstone Project\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj"
+              "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj"
               }
             }
           }

@@ -1,0 +1,12 @@
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\bin\Debug\netcoreapp3.1\HiringPortalAPI.Application.deps.json
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\bin\Debug\netcoreapp3.1\HiringPortalAPI.Application.dll
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\bin\Debug\netcoreapp3.1\HiringPortalAPI.Application.pdb
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\bin\Debug\netcoreapp3.1\HiringPortalAPI.Domain.dll
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\bin\Debug\netcoreapp3.1\HiringPortalAPI.Domain.pdb
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.csprojAssemblyReference.cache
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.AssemblyInfoInputs.cache
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.AssemblyInfo.cs
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.csproj.CopyComplete
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.dll
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.pdb
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.csproj.CoreCompileInputs.cache
