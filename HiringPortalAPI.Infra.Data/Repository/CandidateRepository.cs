@@ -10,6 +10,7 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace HiringPortalAPI.Infra.Data.Repository
 {
     public class CandidateRepository : ICandidateRepository
@@ -77,9 +78,8 @@ namespace HiringPortalAPI.Infra.Data.Repository
                                       InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
                                       //StudioTeam = oListItem["StudioTeam"] != null ? oListItem["StudioTeam"].ToString() : null,
                                   }).ToList();
-
             return (hiringInfoList);
-
         }
+        
     }
 }
