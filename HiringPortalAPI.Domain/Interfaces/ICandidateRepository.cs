@@ -9,5 +9,6 @@ namespace HiringPortalAPI.Domain.Interfaces
     {
         List<HiringInfoModel> GetCandidates();
         bool UpdatePanelist();
+        List<string> GetPanelistData();
     }
 }

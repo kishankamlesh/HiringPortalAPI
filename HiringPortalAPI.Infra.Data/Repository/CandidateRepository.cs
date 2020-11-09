@@ -82,12 +82,12 @@ namespace HiringPortalAPI.Infra.Data.Repository
                                       InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
                                       //StudioTeam = oListItem["StudioTeam"] != null ? oListItem["StudioTeam"].ToString() : null,
                                   }).ToList();
-            GetPanelistData();
+            //GetPanelistData();
             return (hiringInfoList);
         }
-        public string GetPanelistData()
+        public List<string> GetPanelistData()
         {
-            string panelistName = "Not Assigned";
+            List<string> panelistData = new List<string>();
             var groupCollection = ctx.Web.SiteGroups;
             var getGroup = groupCollection.GetByName("Panelists");
             var collUser = getGroup.Users;
@@ -96,7 +96,10 @@ namespace HiringPortalAPI.Infra.Data.Repository
 
             foreach (var getUser in collUser)
             {
-                Console.WriteLine("User: {0} Email: {1} Login Name: {2}", getUser.Title, getUser.Email, getUser.LoginName);
+                panelistData.Add(getUser.Title.ToString());
+                panelistData.Add(getUser.Email.ToString());
+                panelistData.Add(getUser.LoginName.ToString());
+                //Console.WriteLine("User: {0} Email: {1} Login Name: {2}", getUser.Title, getUser.Email, getUser.LoginName);
             }
             /*
             foreach (var getUser in collUser)
@@ -107,7 +110,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
                 }                
             }
             */
-            return panelistName;
+            return panelistData;
             
         }
 
