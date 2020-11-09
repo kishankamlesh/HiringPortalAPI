@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {}
+    "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {
+    "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
         "projectName": "HiringPortalAPI.Domain",
-        "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
-        "packagesPath": "C:\\Users\\kisha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\Aneesh Kumar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Aneesh Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

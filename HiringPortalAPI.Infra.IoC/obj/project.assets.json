@@ -9422,23 +9422,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kisha\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Aneesh Kumar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj",
+      "projectUniqueName": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj",
       "projectName": "HiringPortalAPI.Infra.IoC",
-      "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj",
-      "packagesPath": "C:\\Users\\kisha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.IoC\\obj\\",
+      "projectPath": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Infra.IoC\\HiringPortalAPI.Infra.IoC.csproj",
+      "packagesPath": "C:\\Users\\Aneesh Kumar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Infra.IoC\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\kisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Aneesh Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9451,11 +9447,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj": {
-              "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj"
+            "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj": {
+              "projectPath": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj"
             },
-            "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj": {
-              "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj"
+            "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Infra.Data\\HiringPortalAPI.Infra.Data.csproj"
             }
           }
         }
