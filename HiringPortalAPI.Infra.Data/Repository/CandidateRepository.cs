@@ -118,6 +118,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
         {
             bool updateStatus = false;
             string id = "1023";
+            string email = "Panelist1@gearedupteam.onmicrosoft.com";
             var oList = ctx.Web.Lists.GetByTitle("GDAS-Hiring-Info");
 
             var camlQuery = new CamlQuery
@@ -128,13 +129,27 @@ namespace HiringPortalAPI.Infra.Data.Repository
             
             var collListItem = oList.GetItems(camlQuery);
             ctx.Load(collListItem);
-            ctx.ExecuteQuery();        
+            ctx.ExecuteQuery();
+            var users = ctx.Web.SiteUsers;
+            ctx.Load(users);
+            ctx.ExecuteQuery();
+            var panelist = users.GetByEmail(email);
+
+            ctx.Load(panelist);
+            ctx.ExecuteQuery();
+            var assignedToValue = new FieldUserValue() { LookupId = panelist.Id };
+
+            var assignedToValues = new[] { assignedToValue };                       
             foreach (var listItem in collListItem)
             {
-                listItem["UsedForScreeningPrimaryPanelist"] = "DemoPanelist";
+                listItem["UsedForScreeningPrimaryPanelist"] = assignedToValues;
                 listItem.Update();
             }
-            ctx.ExecuteQuery();
+            foreach (var user in users)
+            {
+                Console.WriteLine(user.Title + "\t" + user.Email);
+            }
+            
             return updateStatus;
         }
     }
