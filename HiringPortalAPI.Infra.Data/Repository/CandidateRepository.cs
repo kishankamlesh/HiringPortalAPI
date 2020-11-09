@@ -76,7 +76,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
                                       //CandidateShortlisted = oListItem["CandidateShortlisted"] != null ? oListItem["CandidateShortlisted"].ToString() : null,
                                       CandidateEmailID = oListItem["CandidateEmailID"] != null ? oListItem["CandidateEmailID"].ToString() : null,
                                       CandidateContactNumber = oListItem["CandidateContactNumber"] != null ? oListItem["CandidateContactNumber"].ToString() : null,
-                                      //PrimaryPanelist = GetPanelistData((ListItem)oListItem["PrimaryPanelist"]),
+                                      //PrimaryPanelist = (FieldUserValue)oListItem["UsedForScreeningPrimaryPanelist"].ToString(),
                                       //DelegatedPanelist = oListItem["DelegatedPanelist"] != null ? oListItem["DelegatedPanelist"].ToString() : null,
                                       HRPersonOrGroupInterviewStatus = oListItem["HRPersonOrGroupInterviewStatus"] != null ? oListItem["HRPersonOrGroupInterviewStatus"].ToString() : null,
                                       InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
@@ -119,37 +119,46 @@ namespace HiringPortalAPI.Infra.Data.Repository
             bool updateStatus = false;
             string id = "1023";
             string email = "Panelist1@gearedupteam.onmicrosoft.com";
-            var oList = ctx.Web.Lists.GetByTitle("GDAS-Hiring-Info");
 
+
+            var oList = ctx.Web.Lists.GetByTitle("GDAS-Hiring-Info");
             var camlQuery = new CamlQuery
             {
                 ViewXml = "<View><Query><Where><Eq><FieldRef Name='CandidateID'/>" +
                 "<Value Type='Number'>"+id+"</Value></Eq></Where></Query><RowLimit>100</RowLimit></View>"
             };
-            
+            //getting the particular candidate using caml query
             var collListItem = oList.GetItems(camlQuery);
             ctx.Load(collListItem);
             ctx.ExecuteQuery();
+
+            //getting users
             var users = ctx.Web.SiteUsers;
             ctx.Load(users);
             ctx.ExecuteQuery();
-            var panelist = users.GetByEmail(email);
 
+            
+            //getting panlists data
+            var panelist = users.GetByEmail(email);
             ctx.Load(panelist);
             ctx.ExecuteQuery();
             var assignedToValue = new FieldUserValue() { LookupId = panelist.Id };
-
-            var assignedToValues = new[] { assignedToValue };                       
+            var assignedToValues = new[] { assignedToValue };
+            
+            //updating data
             foreach (var listItem in collListItem)
             {
                 listItem["UsedForScreeningPrimaryPanelist"] = assignedToValues;
                 listItem.Update();
             }
+            /*
             foreach (var user in users)
             {
                 Console.WriteLine(user.Title + "\t" + user.Email);
             }
-            
+            */
+            ctx.ExecuteQuery();
+            Console.WriteLine(panelist.Title);
             return updateStatus;
         }
     }
