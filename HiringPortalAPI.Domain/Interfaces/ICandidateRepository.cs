@@ -8,5 +8,6 @@ namespace HiringPortalAPI.Domain.Interfaces
     public interface ICandidateRepository
     {
         List<HiringInfoModel> GetCandidates();
+        bool UpdatePanelist();
     }
 }

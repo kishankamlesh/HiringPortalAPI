@@ -13,6 +13,7 @@ namespace HiringPortalAPI.Infra.IoC
         {
             //Application Layer
             services.AddScoped<IGetCandidates, GetCandidatesService>();
+            services.AddScoped<IUpdatePrimaryPanelist, UpdatePrimaryPanelistService>();
             
 
             //infra.Data layer

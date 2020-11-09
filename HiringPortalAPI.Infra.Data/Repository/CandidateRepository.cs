@@ -53,6 +53,9 @@ namespace HiringPortalAPI.Infra.Data.Repository
         public List<HiringInfoModel> GetCandidates()
         {
             var oList = ctx.Web.Lists.GetByTitle("GDAS-Hiring-Info");
+            
+            
+
             var camlQuery = new CamlQuery
             {
                 ViewXml = "<View><Query><Where><Geq><FieldRef Name='ID'/>" +
@@ -62,7 +65,8 @@ namespace HiringPortalAPI.Infra.Data.Repository
             var collListItem = oList.GetItems(camlQuery);
             ctx.Load(collListItem);
             ctx.ExecuteQuery();
-
+            
+            
             var hiringInfoList = (from ListItem oListItem in collListItem
                                   select new HiringInfoModel
                                   {
@@ -72,14 +76,63 @@ namespace HiringPortalAPI.Infra.Data.Repository
                                       //CandidateShortlisted = oListItem["CandidateShortlisted"] != null ? oListItem["CandidateShortlisted"].ToString() : null,
                                       CandidateEmailID = oListItem["CandidateEmailID"] != null ? oListItem["CandidateEmailID"].ToString() : null,
                                       CandidateContactNumber = oListItem["CandidateContactNumber"] != null ? oListItem["CandidateContactNumber"].ToString() : null,
-                                      //PrimaryPanelist = oListItem["PrimaryPanelist"] != null ? oListItem["PrimaryPanelist"].ToString() : null,
+                                      //PrimaryPanelist = GetPanelistData((ListItem)oListItem["PrimaryPanelist"]),
                                       //DelegatedPanelist = oListItem["DelegatedPanelist"] != null ? oListItem["DelegatedPanelist"].ToString() : null,
                                       HRPersonOrGroupInterviewStatus = oListItem["HRPersonOrGroupInterviewStatus"] != null ? oListItem["HRPersonOrGroupInterviewStatus"].ToString() : null,
                                       InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
                                       //StudioTeam = oListItem["StudioTeam"] != null ? oListItem["StudioTeam"].ToString() : null,
                                   }).ToList();
+            GetPanelistData();
             return (hiringInfoList);
         }
-        
+        public string GetPanelistData()
+        {
+            string panelistName = "Not Assigned";
+            var groupCollection = ctx.Web.SiteGroups;
+            var getGroup = groupCollection.GetByName("Panelists");
+            var collUser = getGroup.Users;
+            ctx.Load(collUser);
+            ctx.ExecuteQuery();
+
+            foreach (var getUser in collUser)
+            {
+                Console.WriteLine("User: {0} Email: {1} Login Name: {2}", getUser.Title, getUser.Email, getUser.LoginName);
+            }
+            /*
+            foreach (var getUser in collUser)
+            {
+                if (listItem["PrimaryPanelist"].ToString() == getUser.Title)
+                {
+                    panelistName = getUser.Title.ToString();
+                }                
+            }
+            */
+            return panelistName;
+            
+        }
+
+        public bool UpdatePanelist()
+        {
+            bool updateStatus = false;
+            string id = "1023";
+            var oList = ctx.Web.Lists.GetByTitle("GDAS-Hiring-Info");
+
+            var camlQuery = new CamlQuery
+            {
+                ViewXml = "<View><Query><Where><Eq><FieldRef Name='CandidateID'/>" +
+                "<Value Type='Number'>"+id+"</Value></Eq></Where></Query><RowLimit>100</RowLimit></View>"
+            };
+            
+            var collListItem = oList.GetItems(camlQuery);
+            ctx.Load(collListItem);
+            ctx.ExecuteQuery();        
+            foreach (var listItem in collListItem)
+            {
+                listItem["UsedForScreeningPrimaryPanelist"] = "DemoPanelist";
+                listItem.Update();
+            }
+            ctx.ExecuteQuery();
+            return updateStatus;
+        }
     }
 }
