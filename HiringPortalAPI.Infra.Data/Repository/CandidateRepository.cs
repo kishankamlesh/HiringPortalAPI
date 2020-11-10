@@ -69,11 +69,12 @@ namespace HiringPortalAPI.Infra.Data.Repository
 
             var hiringInfoList = (from ListItem oListItem in collListItem
 
-                                  let primaryPanelisData = (FieldUserValue)oListItem["UsedForScreeningPrimaryPanelist"]
-                                  let panelistEmail = primaryPanelisData.Email != null ? primaryPanelisData.Email.ToString() : null
+                                  let primaryPanelistData = (FieldUserValue)oListItem["UsedForScreeningPrimaryPanelist"]
+                                  let panelistEmail = primaryPanelistData.Email != null ? primaryPanelistData.Email.ToString() : null
                                   let delegatedPanelistData = (FieldUserValue)oListItem["DelegatedPanelist"]
                                   let delegatedPanelistEmail = delegatedPanelistData.Email != null ? delegatedPanelistData.Email.ToString() : null
-
+                                  //let studioTeamData = (FieldUserValue)oListItem["StudioTeam"]
+                                  //let studioTeamEmail = studioTeamData.Email != null? studioTeamData.Email.ToString() : null
                                   select new HiringInfoModel
                                   {
                                       Title = oListItem["Title"] != null ? oListItem["Title"].ToString() : null,
@@ -86,7 +87,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
                                       DelegatedPanelist = delegatedPanelistEmail,
                                       HRPersonOrGroupInterviewStatus = oListItem["HRPersonOrGroupInterviewStatus"] != null ? oListItem["HRPersonOrGroupInterviewStatus"].ToString() : null,
                                       InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
-                                      //StudioTeam = oListItem["StudioTeam"] != null ? oListItem["StudioTeam"].ToString() : null,
+                                      //StudioTeam = studioTeamEmail,
                                   }).ToList();
             
             return (hiringInfoList);
@@ -171,7 +172,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error Message:" + ex.Message.ToString());
+                Console.WriteLine("Error Message: " + ex.Message.ToString());
             }
             
             return updateStatus;
