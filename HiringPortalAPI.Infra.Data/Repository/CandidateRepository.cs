@@ -68,6 +68,12 @@ namespace HiringPortalAPI.Infra.Data.Repository
             
             
             var hiringInfoList = (from ListItem oListItem in collListItem
+                                  
+                                  let primaryPanelisData = (FieldUserValue)oListItem["UsedForScreeningPrimaryPanelist"]
+                                  let panelistEmail = primaryPanelisData.Email != null ? primaryPanelisData.Email.ToString() : null
+                                  let delegatedPanelistData = (FieldUserValue)oListItem["DelegatedPanelist"]
+                                  let delegatedPanelistEmail = delegatedPanelistData.Email != null ? delegatedPanelistData.Email.ToString() : null
+                                  
                                   select new HiringInfoModel
                                   {
                                       Title = oListItem["Title"] != null ? oListItem["Title"].ToString() : null,
@@ -76,8 +82,8 @@ namespace HiringPortalAPI.Infra.Data.Repository
                                       //CandidateShortlisted = oListItem["CandidateShortlisted"] != null ? oListItem["CandidateShortlisted"].ToString() : null,
                                       CandidateEmailID = oListItem["CandidateEmailID"] != null ? oListItem["CandidateEmailID"].ToString() : null,
                                       CandidateContactNumber = oListItem["CandidateContactNumber"] != null ? oListItem["CandidateContactNumber"].ToString() : null,
-                                      //PrimaryPanelist = (FieldUserValue)oListItem["UsedForScreeningPrimaryPanelist"].ToString(),
-                                      //DelegatedPanelist = oListItem["DelegatedPanelist"] != null ? oListItem["DelegatedPanelist"].ToString() : null,
+                                      PrimaryPanelist = panelistEmail,
+                                      DelegatedPanelist = delegatedPanelistEmail,
                                       HRPersonOrGroupInterviewStatus = oListItem["HRPersonOrGroupInterviewStatus"] != null ? oListItem["HRPersonOrGroupInterviewStatus"].ToString() : null,
                                       InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
                                       //StudioTeam = oListItem["StudioTeam"] != null ? oListItem["StudioTeam"].ToString() : null,
