@@ -66,20 +66,20 @@ namespace HiringPortalAPI.Infra.Data.Repository
             ctx.Load(collListItem);
             ctx.ExecuteQuery();
             
-            
+
             var hiringInfoList = (from ListItem oListItem in collListItem
-                                  
+
                                   let primaryPanelisData = (FieldUserValue)oListItem["UsedForScreeningPrimaryPanelist"]
                                   let panelistEmail = primaryPanelisData.Email != null ? primaryPanelisData.Email.ToString() : null
                                   let delegatedPanelistData = (FieldUserValue)oListItem["DelegatedPanelist"]
                                   let delegatedPanelistEmail = delegatedPanelistData.Email != null ? delegatedPanelistData.Email.ToString() : null
-                                  
+
                                   select new HiringInfoModel
                                   {
                                       Title = oListItem["Title"] != null ? oListItem["Title"].ToString() : null,
                                       CandidateID = oListItem["CandidateID"] != null ? oListItem["CandidateID"].ToString() : null,
                                       CandidateName = oListItem["CandidateName"] != null ? oListItem["CandidateName"].ToString() : null,
-                                      //CandidateShortlisted = oListItem["CandidateShortlisted"] != null ? oListItem["CandidateShortlisted"].ToString() : null,
+                                      CandidateShortlisted = oListItem["candidateshortlisted"] != null ? oListItem["candidateshortlisted"].ToString() : null,
                                       CandidateEmailID = oListItem["CandidateEmailID"] != null ? oListItem["CandidateEmailID"].ToString() : null,
                                       CandidateContactNumber = oListItem["CandidateContactNumber"] != null ? oListItem["CandidateContactNumber"].ToString() : null,
                                       PrimaryPanelist = panelistEmail,
