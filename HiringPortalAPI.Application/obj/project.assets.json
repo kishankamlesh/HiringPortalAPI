@@ -27,23 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kisha\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Aneesh Kumar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj",
       "projectName": "HiringPortalAPI.Application",
-      "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj",
-      "packagesPath": "C:\\Users\\kisha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Application\\obj\\",
+      "projectPath": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Application\\HiringPortalAPI.Application.csproj",
+      "packagesPath": "C:\\Users\\Aneesh Kumar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Application\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\kisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Aneesh Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -56,8 +52,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {
-              "projectPath": "C:\\Users\\kisha\\source\\repos\\HiringPortalAPI\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj"
+            "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj": {
+              "projectPath": "C:\\Users\\Aneesh Kumar\\Source\\Repos\\HiringPortalAPIModified\\HiringPortalAPI.Domain\\HiringPortalAPI.Domain.csproj"
             }
           }
         }
