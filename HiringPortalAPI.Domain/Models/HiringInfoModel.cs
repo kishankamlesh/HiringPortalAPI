@@ -12,7 +12,7 @@ namespace HiringPortalAPI.Domain.Models
         public string CandidateEmailID { get; set; }
         public string CandidateContactNumber { get; set; }
         public string CandidateShortlisted { get; set; }
-        public string PrimaryPanelist { get; set; }
+        public string UsedForScreeningPrimaryPanelist { get; set; }
         public string DelegatedPanelist { get; set; }
         public string StudioTeam { get; set; }
         public string InterviewLevel { get; set; }

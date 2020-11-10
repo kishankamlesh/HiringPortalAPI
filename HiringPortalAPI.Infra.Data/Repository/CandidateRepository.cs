@@ -52,38 +52,40 @@ namespace HiringPortalAPI.Infra.Data.Repository
 
         public List<HiringInfoModel> GetCandidates()
         {
+            var web = ctx.Web;
+            ctx.Load(web);
             var oList = ctx.Web.Lists.GetByTitle("GDAS-Hiring-Info");
-            
-            
-
             var camlQuery = new CamlQuery
             {
                 ViewXml = "<View><Query><Where><Geq><FieldRef Name='ID'/>" +
                 "<Value Type='Number'>0</Value></Geq></Where></Query><RowLimit>100</RowLimit></View>"
             };
-
             var collListItem = oList.GetItems(camlQuery);
             ctx.Load(collListItem);
             ctx.ExecuteQuery();
-            
-            
             var hiringInfoList = (from ListItem oListItem in collListItem
+                                      //let value = (FieldLookupValue)oListItem["CandidateShortlisted"]
+                                      //let shortList = (bool)oListItem["CandidateShortlisted"] ? "Yes" : "NO"
+                                  let fieldUserValue1 = (FieldUserValue)oListItem["UsedForScreeningPrimaryPanelist"]
+                                  let userEmail = fieldUserValue1.Email != null ? fieldUserValue1.Email.ToString() : null
+                                  let fieldUserValue2 = (FieldUserValue)oListItem["DelegatedPanelist"]
+                                  let userDelegateEmail = fieldUserValue2.Email != null ? fieldUserValue2.Email.ToString() : null
                                   select new HiringInfoModel
                                   {
                                       Title = oListItem["Title"] != null ? oListItem["Title"].ToString() : null,
                                       CandidateID = oListItem["CandidateID"] != null ? oListItem["CandidateID"].ToString() : null,
                                       CandidateName = oListItem["CandidateName"] != null ? oListItem["CandidateName"].ToString() : null,
-                                      //CandidateShortlisted = oListItem["CandidateShortlisted"] != null ? oListItem["CandidateShortlisted"].ToString() : null,
                                       CandidateEmailID = oListItem["CandidateEmailID"] != null ? oListItem["CandidateEmailID"].ToString() : null,
                                       CandidateContactNumber = oListItem["CandidateContactNumber"] != null ? oListItem["CandidateContactNumber"].ToString() : null,
-                                      //PrimaryPanelist = GetPanelistData((ListItem)oListItem["PrimaryPanelist"]),
-                                      //DelegatedPanelist = oListItem["DelegatedPanelist"] != null ? oListItem["DelegatedPanelist"].ToString() : null,
-                                      HRPersonOrGroupInterviewStatus = oListItem["HRPersonOrGroupInterviewStatus"] != null ? oListItem["HRPersonOrGroupInterviewStatus"].ToString() : null,
-                                      InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
+                                      //CandidateShortlisted = (bool)oListItem["CandidateShortlisted"] ? "Yes" : "No",
                                       //StudioTeam = oListItem["StudioTeam"] != null ? oListItem["StudioTeam"].ToString() : null,
+                                      UsedForScreeningPrimaryPanelist = userEmail,
+                                      DelegatedPanelist = userDelegateEmail,
+                                      InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
+                                      HRPersonOrGroupInterviewStatus = oListItem["HRPersonOrGroupInterviewStatus"] != null ? oListItem["HRPersonOrGroupInterviewStatus"].ToString() : null
                                   }).ToList();
-            //GetPanelistData();
-            return (hiringInfoList);
+
+            return hiringInfoList;
         }
         public List<string> GetPanelistData()
         {

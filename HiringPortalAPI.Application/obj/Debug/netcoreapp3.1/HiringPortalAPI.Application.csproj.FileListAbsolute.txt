@@ -10,3 +10,15 @@ C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\obj\Debu
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.dll
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.pdb
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\bin\Debug\netcoreapp3.1\HiringPortalAPI.Application.deps.json
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\bin\Debug\netcoreapp3.1\HiringPortalAPI.Application.dll
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\bin\Debug\netcoreapp3.1\HiringPortalAPI.Application.pdb
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\bin\Debug\netcoreapp3.1\HiringPortalAPI.Domain.dll
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\bin\Debug\netcoreapp3.1\HiringPortalAPI.Domain.pdb
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.csprojAssemblyReference.cache
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.AssemblyInfoInputs.cache
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.AssemblyInfo.cs
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.csproj.CopyComplete
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.dll
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Application\obj\Debug\netcoreapp3.1\HiringPortalAPI.Application.pdb

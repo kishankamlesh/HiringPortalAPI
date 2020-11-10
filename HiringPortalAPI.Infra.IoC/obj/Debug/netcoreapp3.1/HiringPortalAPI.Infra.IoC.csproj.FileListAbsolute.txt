@@ -14,3 +14,19 @@ C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Infra.IoC\bin\Debug\
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Infra.IoC\obj\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.csproj.CopyComplete
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Infra.IoC\obj\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.dll
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI.Infra.IoC\obj\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.pdb
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\bin\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.deps.json
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\bin\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.dll
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\bin\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.pdb
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\bin\Debug\netcoreapp3.1\HiringPortalAPI.Application.dll
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\bin\Debug\netcoreapp3.1\HiringPortalAPI.Domain.dll
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\bin\Debug\netcoreapp3.1\HiringPortalAPI.Infra.Data.dll
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\bin\Debug\netcoreapp3.1\HiringPortalAPI.Application.pdb
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\bin\Debug\netcoreapp3.1\HiringPortalAPI.Infra.Data.pdb
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\bin\Debug\netcoreapp3.1\HiringPortalAPI.Domain.pdb
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\obj\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.csprojAssemblyReference.cache
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\obj\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.AssemblyInfoInputs.cache
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\obj\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.AssemblyInfo.cs
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\obj\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.csproj.CoreCompileInputs.cache
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\obj\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.csproj.CopyComplete
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\obj\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.dll
+C:\Users\Aneesh Kumar\Source\Repos\HiringPortalAPIModified\HiringPortalAPI.Infra.IoC\obj\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.pdb
