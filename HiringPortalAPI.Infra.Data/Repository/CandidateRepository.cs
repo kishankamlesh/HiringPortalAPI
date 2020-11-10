@@ -171,7 +171,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error Occured:" + ex.Message.ToString());
+                Console.WriteLine("Error Message:" + ex.Message.ToString());
             }
             
             return updateStatus;
