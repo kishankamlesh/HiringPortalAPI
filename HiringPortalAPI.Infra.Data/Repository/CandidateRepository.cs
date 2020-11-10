@@ -66,10 +66,10 @@ namespace HiringPortalAPI.Infra.Data.Repository
             var hiringInfoList = (from ListItem oListItem in collListItem
                                       //let value = (FieldLookupValue)oListItem["CandidateShortlisted"]
                                       //let shortList = (bool)oListItem["CandidateShortlisted"] ? "Yes" : "NO"
-                                  let fieldUserValue1 = (FieldUserValue)oListItem["UsedForScreeningPrimaryPanelist"]
-                                  let userEmail = fieldUserValue1.Email != null ? fieldUserValue1.Email.ToString() : null
-                                  let fieldUserValue2 = (FieldUserValue)oListItem["DelegatedPanelist"]
-                                  let userDelegateEmail = fieldUserValue2.Email != null ? fieldUserValue2.Email.ToString() : null
+                                  let primaryPanelisData = (FieldUserValue)oListItem["UsedForScreeningPrimaryPanelist"]
+                                  let panelistEmail = primaryPanelisData.Email != null ? primaryPanelisData.Email.ToString() : null
+                                  let delegatedPanelistData = (FieldUserValue)oListItem["DelegatedPanelist"]
+                                  let delegatedPanelistEmail = delegatedPanelistData.Email != null ? delegatedPanelistData.Email.ToString() : null
                                   select new HiringInfoModel
                                   {
                                       Title = oListItem["Title"] != null ? oListItem["Title"].ToString() : null,
@@ -79,8 +79,8 @@ namespace HiringPortalAPI.Infra.Data.Repository
                                       CandidateContactNumber = oListItem["CandidateContactNumber"] != null ? oListItem["CandidateContactNumber"].ToString() : null,
                                       //CandidateShortlisted = (bool)oListItem["CandidateShortlisted"] ? "Yes" : "No",
                                       //StudioTeam = oListItem["StudioTeam"] != null ? oListItem["StudioTeam"].ToString() : null,
-                                      UsedForScreeningPrimaryPanelist = userEmail,
-                                      DelegatedPanelist = userDelegateEmail,
+                                      UsedForScreeningPrimaryPanelist = panelistEmail,
+                                      DelegatedPanelist = delegatedPanelistEmail,
                                       InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
                                       HRPersonOrGroupInterviewStatus = oListItem["HRPersonOrGroupInterviewStatus"] != null ? oListItem["HRPersonOrGroupInterviewStatus"].ToString() : null
                                   }).ToList();
@@ -134,9 +134,19 @@ namespace HiringPortalAPI.Infra.Data.Repository
             foreach (var listItem in collListItem)
             {
                 listItem["UsedForScreeningPrimaryPanelist"] = "DemoPanelist";
+                listItem["candidateshortlisted"] = "1";
                 listItem.Update();
             }
-            ctx.ExecuteQuery();
+            try
+            {
+                ctx.ExecuteQuery();
+                updateStatus = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error Occured:" + ex.Message.ToString());
+            }
+            
             return updateStatus;
         }
     }
