@@ -82,7 +82,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
                                       InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
                                       //StudioTeam = oListItem["StudioTeam"] != null ? oListItem["StudioTeam"].ToString() : null,
                                   }).ToList();
-            //GetPanelistData();
+            
             return (hiringInfoList);
         }
         public List<string> GetPanelistData()
@@ -149,6 +149,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
             foreach (var listItem in collListItem)
             {
                 listItem["UsedForScreeningPrimaryPanelist"] = assignedToValues;
+                listItem["candidateshortlisted"] = "1";
                 listItem.Update();
             }
             /*
@@ -157,8 +158,16 @@ namespace HiringPortalAPI.Infra.Data.Repository
                 Console.WriteLine(user.Title + "\t" + user.Email);
             }
             */
-            ctx.ExecuteQuery();
-            Console.WriteLine(panelist.Title);
+            try
+            {
+                ctx.ExecuteQuery();
+                updateStatus = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error Occured:" + ex.Message.ToString());
+            }
+            
             return updateStatus;
         }
     }
