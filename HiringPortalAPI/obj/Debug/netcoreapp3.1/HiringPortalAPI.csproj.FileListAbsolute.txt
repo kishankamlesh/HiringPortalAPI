@@ -1,6 +1,5 @@
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI\bin\Debug\netcoreapp3.1\HiringPortalAPI.exe
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI\bin\Debug\netcoreapp3.1\HiringPortalAPI.deps.json
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI\bin\Debug\netcoreapp3.1\HiringPortalAPI.runtimeconfig.json
@@ -220,3 +219,4 @@ C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI\bin\Debug\netcoreapp
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI\bin\Debug\netcoreapp3.1\HiringPortalAPI.Infra.IoC.pdb
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI\bin\Debug\netcoreapp3.1\HiringPortalAPI.Infra.Data.pdb
 C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI\obj\Debug\netcoreapp3.1\HiringPortalAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\kisha\source\repos\HiringPortalAPI\HiringPortalAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\HiringPortalAPI.styles.css

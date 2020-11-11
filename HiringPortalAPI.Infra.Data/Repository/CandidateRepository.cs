@@ -73,7 +73,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
                                   let panelistEmail = primaryPanelistData.Email != null ? primaryPanelistData.Email.ToString() : null
                                   let delegatedPanelistData = (FieldUserValue)oListItem["DelegatedPanelist"]
                                   let delegatedPanelistEmail = delegatedPanelistData.Email != null ? delegatedPanelistData.Email.ToString() : null
-                                  //let studioTeamData = (FieldUserValue)oListItem["StudioTeam"]
+                                  //let studioTeamData = (FieldUserValue)oListItem["StudioTeam_x002f_HiringPanel"]
                                   //let studioTeamEmail = studioTeamData.Email != null? studioTeamData.Email.ToString() : null
                                   select new HiringInfoModel
                                   {
