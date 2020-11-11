@@ -106,17 +106,9 @@ namespace HiringPortalAPI.Infra.Data.Repository
                 panelistData.Add(getUser.Title.ToString());
                 panelistData.Add(getUser.Email.ToString());
                 panelistData.Add(getUser.LoginName.ToString());
-                //Console.WriteLine("User: {0} Email: {1} Login Name: {2}", getUser.Title, getUser.Email, getUser.LoginName);
+                
             }
-            /*
-            foreach (var getUser in collUser)
-            {
-                if (listItem["PrimaryPanelist"].ToString() == getUser.Title)
-                {
-                    panelistName = getUser.Title.ToString();
-                }                
-            }
-            */
+            
             return panelistData;
             
         }
@@ -158,13 +150,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
                 listItem["UsedForScreeningPrimaryPanelist"] = assignedToValues;
                 listItem["candidateshortlisted"] = "1";
                 listItem.Update();
-            }
-            /*
-            foreach (var user in users)
-            {
-                Console.WriteLine(user.Title + "\t" + user.Email);
-            }
-            */
+            }                        
             try
             {
                 ctx.ExecuteQuery();
