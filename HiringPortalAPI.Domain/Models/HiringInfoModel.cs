@@ -17,5 +17,7 @@ namespace HiringPortalAPI.Domain.Models
         public string StudioTeam { get; set; }
         public string InterviewLevel { get; set; }
         public string HRPersonOrGroupInterviewStatus { get; set; }
+        public string lookupCandidateId { get; set; }
+        public string lookupCandidateName { get; set; }
     }
 }

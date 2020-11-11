@@ -70,11 +70,16 @@ namespace HiringPortalAPI.Infra.Data.Repository
             var hiringInfoList = (from ListItem oListItem in collListItem
 
                                   let primaryPanelistData = (FieldUserValue)oListItem["UsedForScreeningPrimaryPanelist"]
-                                  let panelistEmail = primaryPanelistData.Email != null ? primaryPanelistData.Email.ToString() : null
+                                  let panelistEmail = primaryPanelistData != null ? Convert.ToString(primaryPanelistData.Email) : null
                                   let delegatedPanelistData = (FieldUserValue)oListItem["DelegatedPanelist"]
-                                  let delegatedPanelistEmail = delegatedPanelistData.Email != null ? delegatedPanelistData.Email.ToString() : null
+                                  let delegatedPanelistEmail = delegatedPanelistData != null ? Convert.ToString(delegatedPanelistData.Email) : null
+                                  let lookupCandidateIdData = (FieldLookupValue) oListItem["Candidate_Id"]
+                                  let lookupCandidateId = lookupCandidateIdData != null ? (lookupCandidateIdData.LookupValue) : null
+                                  let lookupCandidateNameData = (FieldLookupValue)oListItem["Candidate_Id_x003a_Candidate_x00"]
+                                  let lookupCandidateName = lookupCandidateNameData != null ? Convert.ToString(lookupCandidateNameData.LookupValue) : null
                                   //let studioTeamData = (FieldUserValue)oListItem["StudioTeam_x002f_HiringPanel"]
                                   //let studioTeamEmail = studioTeamData.Email != null? studioTeamData.Email.ToString() : null
+
                                   select new HiringInfoModel
                                   {
                                       Title = oListItem["Title"] != null ? oListItem["Title"].ToString() : null,
@@ -88,6 +93,8 @@ namespace HiringPortalAPI.Infra.Data.Repository
                                       HRPersonOrGroupInterviewStatus = oListItem["HRPersonOrGroupInterviewStatus"] != null ? oListItem["HRPersonOrGroupInterviewStatus"].ToString() : null,
                                       InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
                                       //StudioTeam = studioTeamEmail,
+                                      lookupCandidateId = (lookupCandidateId).Substring(0,4),
+                                      lookupCandidateName = lookupCandidateName
                                   }).ToList();
             
             return (hiringInfoList);
@@ -126,41 +133,41 @@ namespace HiringPortalAPI.Infra.Data.Repository
                 ViewXml = "<View><Query><Where><Eq><FieldRef Name='CandidateID'/>" +
                 "<Value Type='Number'>"+id+"</Value></Eq></Where></Query><RowLimit>100</RowLimit></View>"
             };
-            //getting the particular candidate using caml query
-            var collListItem = oList.GetItems(camlQuery);
-            ctx.Load(collListItem);
-            ctx.ExecuteQuery();
-
-            //getting users
-            var users = ctx.Web.SiteUsers;
-            ctx.Load(users);
-            ctx.ExecuteQuery();
-
-            
-            //getting panlists data
-            var panelist = users.GetByEmail(email);
-            ctx.Load(panelist);
-            ctx.ExecuteQuery();
-            var assignedToValue = new FieldUserValue() { LookupId = panelist.Id };
-            var assignedToValues = new[] { assignedToValue };
-            
-            //updating data
-            foreach (var listItem in collListItem)
-            {
-                listItem["UsedForScreeningPrimaryPanelist"] = assignedToValues;
-                listItem["candidateshortlisted"] = "1";
-                listItem.Update();
-            }                        
             try
             {
+                //getting the particular candidate using caml query
+                var collListItem = oList.GetItems(camlQuery);
+                ctx.Load(collListItem);
+                ctx.ExecuteQuery();
+
+                //getting users
+                var users = ctx.Web.SiteUsers;
+                ctx.Load(users);
+                ctx.ExecuteQuery();
+
+
+                //getting panlists data
+                var panelist = users.GetByEmail(email);
+                ctx.Load(panelist);
+                ctx.ExecuteQuery();
+                var assignedToValue = new FieldUserValue() { LookupId = panelist.Id };
+                var assignedToValues = new[] { assignedToValue };
+
+                //updating data
+                foreach (var listItem in collListItem)
+                {
+                    listItem["UsedForScreeningPrimaryPanelist"] = assignedToValues;
+                    listItem["candidateshortlisted"] = "1";
+                    listItem.Update();
+                }
                 ctx.ExecuteQuery();
                 updateStatus = true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error Message: " + ex.Message.ToString());
-            }
-            
+
+                Console.WriteLine("Error Occured: " + ex.Message.ToString());
+            }                                                                       
             return updateStatus;
         }
     }
