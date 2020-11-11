@@ -119,7 +119,39 @@ namespace HiringPortalAPI.Infra.Data.Repository
             return panelistData;
             
         }
+        public bool UpdateShortlistStatus()
+        {
+            bool updateStatus = false;
+            string id = "1023";
 
+            var oList = ctx.Web.Lists.GetByTitle("GDAS-Hiring-Info");
+            var camlQuery = new CamlQuery
+            {
+                ViewXml = "<View><Query><Where><Eq><FieldRef Name='CandidateID'/>" +
+                "<Value Type='Number'>" + id + "</Value></Eq></Where></Query><RowLimit>100</RowLimit></View>"
+            };
+            try
+            {
+                //getting the particular candidate using caml query
+                var collListItem = oList.GetItems(camlQuery);
+                ctx.Load(collListItem);
+                ctx.ExecuteQuery();
+
+                foreach (var listItem in collListItem)
+                {                    
+                    listItem["candidateshortlisted"] = "1";
+                    listItem.Update();
+                }
+                ctx.ExecuteQuery();
+                updateStatus = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error Occured: " + ex.Message.ToString());
+                throw;
+            }
+            return updateStatus;
+        }
         public bool UpdatePanelist()
         {
             bool updateStatus = false;

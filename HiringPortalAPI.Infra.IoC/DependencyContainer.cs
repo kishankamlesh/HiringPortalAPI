@@ -15,6 +15,7 @@ namespace HiringPortalAPI.Infra.IoC
             services.AddScoped<IGetCandidates, GetCandidatesService>();
             services.AddScoped<IUpdatePrimaryPanelist, UpdatePrimaryPanelistService>();
             services.AddScoped<IGetPanelistData, GetPanelistDataService>();
+            services.AddScoped<IUpdateShortlistStatus, UpdateShortlistStatusService>();
 
             //infra.Data layer
             services.AddScoped<ICandidateRepository, CandidateRepository>();
