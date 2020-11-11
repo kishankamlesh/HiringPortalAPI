@@ -17,6 +17,7 @@ namespace HiringPortalAPI.Controllers
         {
             _updateShortlistStatus = updateShortlistStatus;
         }
+        
         public IActionResult UpdateShortlistStatus()
         {
             return Ok(_updateShortlistStatus.UpdateShortlistStatus());
