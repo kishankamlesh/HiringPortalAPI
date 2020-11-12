@@ -73,30 +73,34 @@ namespace HiringPortalAPI.Infra.Data.Repository
                                   let panelistEmail = primaryPanelistData != null ? Convert.ToString(primaryPanelistData.Email) : null
                                   let delegatedPanelistData = (FieldUserValue)oListItem["DelegatedPanelist"]
                                   let delegatedPanelistEmail = delegatedPanelistData != null ? Convert.ToString(delegatedPanelistData.Email) : null
-                                  let lookupCandidateIdData = (FieldLookupValue) oListItem["Candidate_Id"]
-                                  let lookupCandidateId = lookupCandidateIdData != null ? (lookupCandidateIdData.LookupValue) : null
-                                  let lookupCandidateNameData = (FieldLookupValue)oListItem["Candidate_Id_x003a_Candidate_x00"]
+                                  let titleData = (FieldLookupValue)oListItem["Candidate_ID_x003a_Title"]
+                                  let title = titleData != null ? Convert.ToString(titleData.LookupValue) : null
+                                  let lookupCandidateIdData = (FieldLookupValue)oListItem["Candidate_ID0"]
+                                  let lookupCandidateId = lookupCandidateIdData != null ? Convert.ToString(lookupCandidateIdData.LookupValue) : null
+                                  let lookupCandidateNameData = (FieldLookupValue)oListItem["Candidate_ID_x003a_Candidate_x001"]
                                   let lookupCandidateName = lookupCandidateNameData != null ? Convert.ToString(lookupCandidateNameData.LookupValue) : null
-                                  //let studioTeamData = (FieldUserValue)oListItem["StudioTeam_x002f_HiringPanel"]
-                                  //let studioTeamEmail = studioTeamData.Email != null? studioTeamData.Email.ToString() : null
+                                  let lookupCandidateEmailData = (FieldLookupValue)oListItem["Candidate_ID_x003a_Candidate_x002"]
+                                  let lookupCandidateEmail = lookupCandidateEmailData != null ? Convert.ToString(lookupCandidateEmailData.LookupValue) : null
+                                  let lookupCandidateNumberData = (FieldLookupValue)oListItem["Candidate_ID_x003a_Candidate_x003"]
+                                  let lookupCandidateNumber = lookupCandidateNumberData != null ? Convert.ToString(lookupCandidateNumberData.LookupValue) : null
+                                  let studioTeamData = (FieldLookupValue)oListItem["Candidate_ID_x003a_Team"]
+                                  let studioTeam = studioTeamData != null ? Convert.ToString(studioTeamData.LookupValue) : null
 
                                   select new HiringInfoModel
                                   {
-                                      Title = oListItem["Title"] != null ? oListItem["Title"].ToString() : null,
-                                      CandidateID = oListItem["CandidateID"] != null ? oListItem["CandidateID"].ToString() : null,
-                                      CandidateName = oListItem["CandidateName"] != null ? oListItem["CandidateName"].ToString() : null,
+                                      Title = title,
+                                      CandidateID = (lookupCandidateId).Substring(0, 4),
+                                      CandidateName = lookupCandidateName,
                                       CandidateShortlisted = oListItem["candidateshortlisted"] != null ? oListItem["candidateshortlisted"].ToString() : null,
-                                      CandidateEmailID = oListItem["CandidateEmailID"] != null ? oListItem["CandidateEmailID"].ToString() : null,
-                                      CandidateContactNumber = oListItem["CandidateContactNumber"] != null ? oListItem["CandidateContactNumber"].ToString() : null,
+                                      CandidateEmailID = lookupCandidateEmail,
+                                      CandidateContactNumber = lookupCandidateNumber,
                                       PrimaryPanelist = panelistEmail,
                                       DelegatedPanelist = delegatedPanelistEmail,
                                       HRPersonOrGroupInterviewStatus = oListItem["HRPersonOrGroupInterviewStatus"] != null ? oListItem["HRPersonOrGroupInterviewStatus"].ToString() : null,
                                       InterviewLevel = oListItem["InterviewLevel"] != null ? oListItem["InterviewLevel"].ToString() : null,
-                                      //StudioTeam = studioTeamEmail,
-                                      lookupCandidateId = (lookupCandidateId).Substring(0,4),
-                                      lookupCandidateName = lookupCandidateName
+                                      StudioTeam = studioTeam,
                                   }).ToList();
-            
+
             return (hiringInfoList);
         }
         public List<string> GetPanelistData()
