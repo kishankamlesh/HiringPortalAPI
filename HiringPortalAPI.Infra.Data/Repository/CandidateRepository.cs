@@ -119,15 +119,37 @@ namespace HiringPortalAPI.Infra.Data.Repository
             return panelistData;
             
         }
+        public List<string> GetPanelistsBySearchString(string searchQuery)
+        {
+            List<string> panelistEmail = new List<string>();
+            var groupCollection = ctx.Web.SiteGroups;
+            var getGroup = groupCollection.GetByName("Panelists");
+            var collUser = getGroup.Users;
+            ctx.Load(collUser);
+            ctx.ExecuteQuery();
+            if (!(String.IsNullOrEmpty(searchQuery)))
+            {
+                foreach (var user in collUser)
+                {
+                    if (user.Email.Contains(searchQuery))
+                    {
+                        panelistEmail.Add(user.Email.ToString());
+                    }
+                }
+
+            }
+            
+            return panelistEmail;
+        }
         public bool UpdateShortlistStatus()
         {
             bool updateStatus = false;
-            string id = "1023";
+            string id = "1006";
 
             var oList = ctx.Web.Lists.GetByTitle("GDAS-Hiring-Info");
             var camlQuery = new CamlQuery
             {
-                ViewXml = "<View><Query><Where><Eq><FieldRef Name='CandidateID'/>" +
+                ViewXml = "<View><Query><Where><Eq><FieldRef Name='Candidate_Id'/>" +
                 "<Value Type='Number'>" + id + "</Value></Eq></Where></Query><RowLimit>100</RowLimit></View>"
             };
             try
@@ -140,6 +162,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
                 foreach (var listItem in collListItem)
                 {                    
                     listItem["candidateshortlisted"] = "1";
+                    listItem["InterviewLevel"] = "Level 2";
                     listItem.Update();
                 }
                 ctx.ExecuteQuery();
@@ -189,7 +212,7 @@ namespace HiringPortalAPI.Infra.Data.Repository
                 foreach (var listItem in collListItem)
                 {
                     listItem["UsedForScreeningPrimaryPanelist"] = assignedToValues;
-                    listItem["candidateshortlisted"] = "1";
+                    
                     listItem.Update();
                 }
                 ctx.ExecuteQuery();

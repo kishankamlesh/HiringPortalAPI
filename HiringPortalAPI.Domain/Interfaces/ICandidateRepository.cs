@@ -12,5 +12,6 @@ namespace HiringPortalAPI.Domain.Interfaces
         List<string> GetPanelistData();
 
         bool UpdateShortlistStatus();
+        List<string> GetPanelistsBySearchString(string searchQuery);
     }
 }
